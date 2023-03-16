@@ -1,14 +1,14 @@
-import React from 'react'
-import About from './About'
-import Banner from './Banner'
+import React from "react";
+import About from "./About";
+import Banner from "./Banner";
 
 const LandingPage = () => {
   return (
     <div>
-        <Banner/>
-        <About/>
+      <Banner />
+      <About />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

@@ -4,23 +4,23 @@ import ErrorPage from "../../ErrorPage/ErrorPage";
 import LandingPage from "../../LandingPage/LandingPage";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children: [
-        {
-          path: "/",
-          element: <LandingPage></LandingPage>,
-        },
-        {
-          path: "/home",
-          element: <LandingPage></LandingPage>,
-        },
-      ],
-    },
-    {
-        path: "*",
-        element: <ErrorPage> </ErrorPage>,
-    },
-  ]);
-  export default router;
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <LandingPage></LandingPage>,
+      },
+      {
+        path: "/home",
+        element: <LandingPage></LandingPage>,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage> </ErrorPage>,
+  },
+]);
+export default router;
