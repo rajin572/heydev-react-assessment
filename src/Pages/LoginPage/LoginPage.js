@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../context/AuthProvider';
 
@@ -20,11 +21,11 @@ const LoginPage = () => {
         const password = form.password.value;
         // eslint-disable-next-line eqeqeq
         if(email==user?.email &&password==user?.password){
-            alert("successfully")
+          toast.success('Login Successfully');
             setUser(user.name)
             navigate(from, {replace: true})
         }else{
-            alert("fail")
+          toast.error('Invalid Email And Password');
         }
     }
 

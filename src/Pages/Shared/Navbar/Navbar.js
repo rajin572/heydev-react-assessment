@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 import primaryImage from '../../../media/primary_logo.jpg'
+import { toast } from 'react-hot-toast';
 
 const Navbar = () => {
 
@@ -14,7 +15,7 @@ const Navbar = () => {
         localStorage.clear();
         setUser(null);
         setSignOut(true);
-        console.log("hi");
+        toast.success('Logout Successfully');
     }
 
     useEffect(() => {
@@ -23,21 +24,6 @@ const Navbar = () => {
         }
     }, [signOut]);
 
-
-    // const { user, setUser} = useContext(AuthContext);
-    // console.log(user);
-
-    // const hundleDelete = (event) =>{
-    //     // event.preventDefault()
-    //     localStorage.clear()
-    //     setUser(null)
-    // }
-
-    // useEffect(() =>{
-    //     if(user){
-           
-    //     }
-    // },[user])
 
     const menuItems = (
         <React.Fragment>
@@ -48,6 +34,9 @@ const Navbar = () => {
             <>
               <li className=" font-bold rounded lg:mx-2  bg-white border-0 hover:bg-white focus:bg-white text-[#bb202e]">
                 <Link to="/users">Users</Link>
+              </li>
+              <li className=" font-bold rounded lg:mx-2  bg-white border-0 hover:bg-white focus:bg-white text-[#bb202e]">
+                <p>{user}</p>
               </li>
               <li className="font-bold rounded lg:mx-2  bg-white border-0 hover:bg-white focus:bg-white text-[#bb202e]">
                 <button onClick={handleSignOut}>Sign out</button>
