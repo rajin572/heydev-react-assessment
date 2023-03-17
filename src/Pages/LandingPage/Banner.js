@@ -5,7 +5,7 @@ import universityLogo from "../../media/newlogo.svg";
 const Banner = () => {
   return (
     <div
-      className=" bg-center bg-no-repeat bg-cover py-8"
+      className=" bg-center bg-no-repeat bg-cover py-12"
       style={{
         backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),url(${backgroundImage})`,
       }}
